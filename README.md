@@ -1,20 +1,117 @@
-# Congratulations! :tada:
+> 回忆版。
+>
+> 题型还是40分简答（一共10题），后面加上6个计算题。
+>
+> 做完后发现基本都是之前的题目或者作业改改套套，特别是2020级的原题考了两道大题。还是比较推荐把往年卷都做掉的。
 
-<img src="https://octodex.github.com/images/welcometocat.png" align="right" height="250px" />
+[TOC]
 
-Yay **jun146s** you finished the exercise! Nice work :tada:
+## 一. 简答题
 
-If you would like to retrace your steps, you can always revisit the exercise.
+> 下面是能回忆出来的。都是差不多长这样，数据可能不一样。
 
-[![](https://img.shields.io/badge/Return%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/jun146s/skills-introduction-to-github/issues/1)
-
-> [!TIP]
-> Mona won't grade you this time! 😉
+### 1. 最佳适配、首次匹配、下次匹配，哪种碎片最小？哪种最快最好？
 
 
-### Craving more? :raising_hand:
 
-Did you enjoy this practical style of learning? There's no better way to learn than building things, right?!
+### 2. RAID0, RAID1, RAID2, RAID3中，哪个用汉明码实现冗余？哪个无论总共有多少个磁盘，都只需要一个作为校验？
 
-Let's keep the momentum going! Head over to [GitHub Skills](https://skills.github.com) catalog to find another hands-on exercise. :rocket:
 
+
+### 3. 短程调度，中程调度，长程调度。创建态->就绪态属于哪个？就绪态->运行态属于哪个？
+
+
+
+### 4. 若内存中有 n 个进程，分别都需要 b 个计算资源来计算，则计算机系统至少需要几个计算资源才能保证没有死锁的危险？请写出计算过程。
+
+
+
+### 5. 假设处理器使用Cache-主存结构。Cache容量为 1000 字节，读取时间为 0.15μs。主存的容量为 100000 字节，读取时间为 1μs。假设1000次的内存读取操作，其中200次要访问主存。那么读取一个字节的平均时间是多少？给出计算过程。
+
+
+
+### 6. 列出Unix中的四种进程之间同步通信方式？
+
+
+
+### 7. 段页式混合，有8个段，每个段内4个页表项，每个页大小2KB。问虚拟存储空间多大，存储地址的组成？
+
+
+
+### 8. 某文件系统采用混合索引的方式组织文件的数据存放。假定在文件的索引节点（INode）中设有13个地址项，其中：直接索引：10项一级间接索引1项，二级间接索引1项，三级间接索引1项。数据块大小4KB，块地址64位，存储一个4GB大小的文件需要占用多少个索引块？
+
+> 对就是问占用多少索引块，类似这个 https://www.cnblogs.com/komorebi-514/p/15898439.html
+
+
+
+
+
+## 二. （磁盘调度）
+
+> 一个无聊的磁盘调度题。和下面这道题面一致，数据变一下。
+
+<img src="C:\Users\wlate\AppData\Roaming\Typora\typora-user-images\image-20250612132415841.png" alt="image-20250612132415841" style="zoom:50%;" />
+
+
+
+## 三. （银行家算法）
+
+> 类似下面的王道的题，数据改了下而已。
+
+<img src="C:\Users\wlate\AppData\Roaming\Typora\typora-user-images\image-20250612021351850.png" alt="image-20250612021351850" style="zoom: 33%;" />
+
+
+
+## 四.（磁盘计算）
+
+> 下面这道，数据变一下。
+
+<img src="C:\Users\wlate\AppData\Roaming\Typora\typora-user-images\image-20250612183330951.png" alt="image-20250612183330951" style="zoom:50%;" />
+
+
+
+## 五.（同步与互斥）
+
+> 找不到原题，只能说类似下面的题面了。
+
+桌上有一个盘子，盘中混合了红豆和绿豆。有两个并发进程（或线程），一个是“红豆分拣进程”，另一个是“绿豆分拣进程”，它们使用同一台分拣机进行工作。
+
+**约束条件如下：**
+
+1. **互斥使用机器**：分拣机是临界资源，两个进程在同一时间只能有一个进程使用。
+2. **交替分拣**：为了保证公平和协调，两个进程必须交替使用分拣机。即一个红豆分拣进程使用完后，必须轮到绿豆分拣进程使用，反之亦然。不允许任何一个进程连续使用两次。
+3. 假设盘子里的豆子足够多，进程可以一直运行。
+
+**任务**：请使用P、V操作（即信号量机制）设计一个算法，来协调这两个进程的同步与互斥，以满足上述要求。假设红豆先分拣。
+
+
+
+## 六. （调度模拟）
+
+> 666这是2020级的原题。完全一致。
+
+<img src="C:\Users\wlate\AppData\Roaming\Typora\typora-user-images\image-20250612040127628.png" alt="image-20250612040127628" style="zoom: 50%;" />
+
+
+
+## 七. （RMS）
+
+速率单调调度。假设所有任务都从0开始，目前有两个任务：$C_1=1,T_1=2$，和 $C_2=1,T_2=6$。
+
+（1）问使用速率单调调度。能不能成功调度？
+
+（2）如果增加一个任务：$C_3=1,T_3=3$。还是使用速率单调调度，能不能成功调度？
+
+
+
+> 这题第一问就是套公式 $n\times (2^{\frac 1 n}-1)$ 这个写一下就行了，类似作业题。
+>
+> 第二问需要注意，套第一问公式会发现，占比和恰好是1，**未必**能成功调度。但是因为题目说了都从0时刻开始，经过实际模拟一下速率单调调度，会发现是正好可以成功调度的。（这是我考场上写的解答思路，供参考）
+
+
+
+## 八. （分布式快照）
+
+> 666这也是2020级的原题，完全一致。当时没复习到，不过2025年的卷面写的这题6分就还好。
+
+<img src="C:\Users\wlate\AppData\Roaming\Typora\typora-user-images\image-20250612184703233.png" alt="image-20250612184703233" style="zoom:50%;" />
